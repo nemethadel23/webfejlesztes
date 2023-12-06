@@ -8,7 +8,7 @@ A JS kód a karrier, illetve a rendelés oldalon található.
 A karrier oldalon a JS összeszámolja az elért pontot a tesztben.
 A rendelés oldalon kiszámolja, hogy a megadott adatok alapján mennit kell majd fizetnünk.
 
-
+A Barlow fonttípust használtam.
 
 Szöveg:
 https://hu.wikipedia.org/wiki/Cristiano_Ronaldo
