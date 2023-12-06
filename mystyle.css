@@ -1,0 +1,198 @@
+/*ÁLTALÁNOS*/
+
+
+html{padding: 0px; 
+    margin: 0px;}
+
+body{padding: 0px; 
+    margin: 0px; 
+    background-color: #c5dbc7; 
+    font-family: 'Barlow', 'Times New Roman';}
+
+* {box-sizing: border-box;}
+
+.container {display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap;}
+
+.container>*{margin: 1%; 
+    height: fit-content;}
+	
+
+header{display: flex;
+    background-color: #93AC96; 
+    flex-direction: row;
+    justify-content: center;}
+	
+
+
+header h1{color: black;  
+    display: block;}
+
+nav ul{display: flex;
+	list-style-type: none;
+flex-direction: column;
+padding: 0px;
+margin: 0px;
+}	
+
+
+nav ul li{padding: 5px;}
+
+nav li a{display: block;
+color: black;
+text-decoration: none;
+background-color: #709173;
+border-radius: 8px;
+padding: 8px;
+text-align: center;}
+
+nav ul li a#active{background-color: #a1b7a3;}
+
+nav ul li a:hover, li a#active:hover{color: black; 
+    background-color: #93ac96;}
+	
+article {color: black; 
+    background-color: #93AC96; 
+    border-radius: 8px; 
+    padding: 10px; 
+    text-align:justify;
+}	
+
+footer{color: black;
+    background-color: #93AC96; 
+    padding: 5px;}
+
+footer a{margin: 10px;}
+
+footer img{height: auto; 
+    width: 35px;}
+
+table{width: 100%;}
+
+.bal{text-align: left;}
+.jobb{text-align: right;}
+
+footer img:hover{transform: scale(1.1); 
+    transition: 1s;}
+.fel a{text-decoration: none;
+color: black;
+width:100%;}
+
+/*INDEX*/
+
+.fooldal1{text-align: center;}
+.fooldal2{text-align: center;}
+.fooldal3{text-align: center;}
+.fooldal4{text-align: center;}
+
+.balon{height:auto;
+width:80%;
+max-width: 300px;}
+.jobbon{height: auto;
+width: 80%;
+max-width: 300px;}
+
+.egykep{height:auto;
+width: 90%;
+max-width: 400px;}
+
+video{height: auto;
+    width: 100%;
+max-width: 450px;}
+
+/*KARRIER*/
+
+.mu{text-align: center;}
+.rm{text-align: center;}
+.ju{text-align: center;}
+
+
+
+/*ÉRDEKESSÉGEK*/
+.kozepre{text-align: center;}
+
+
+
+/*RENDELÉSEK*/
+h2, h3{text-align: center;}
+.balra{text-align: left;}
+
+
+.kozep{text-align: center;}
+
+.mumez{width:80%;
+height: auto;
+max-width: 350px;}
+
+.rmmez{width:80%;
+height: auto;
+max-width: 350px;}
+
+.jumez{width:80%;
+height: auto;
+max-width: 350px;}
+
+img{width:90%;
+height:auto;
+max-width: 400px;}
+
+form{text-align: left; 
+    color: black; width: 100%;
+	}
+
+form.h2{text-align: center;
+color: black;
+}
+
+hr.vonal{height: 5px; 
+    background-color: #6b7379;}
+
+input#vezeteknev{width: 100%;}
+
+input#keresztnev{width: 100%;} 
+
+input#email{width: 100%;}
+
+input#telefonszam{width: 100%;}
+
+input#orszag{width: 100%;}
+
+input#megye{width: 100%;} 
+
+input#iranyitoszam{width: 25%;} 
+
+input#varosutca{width: 100%;}
+
+input#hazszam{width: 100%;}
+
+/*RESZPONZIVITÁS*/
+
+
+
+@media all and (min-width: 600px) {
+
+    div.container{flex-direction: row;}
+    
+    nav ul{flex-direction: row;}
+    
+    nav ul li{flex-basis: 25%;}}
+    .fooldal1{flex-basis: 48%;}
+    .fooldal2{flex-basis: 48%;}
+    .fooldal3{flex-basis: 48%;}
+    .fooldal4{flex-basis: 48%;}
+    .mu{flex-basis: 31%;}
+    .rm{flex-basis: 31%;}
+    .ju{flex-basis: 31%;}
+
+@media all and (min-width: 768px) {
+
+    .mu{flex-basis: 31%;}
+    .rm{flex-basis: 31%;}
+    .ju{flex-basis: 31%;}
+
+
+
+}
+    

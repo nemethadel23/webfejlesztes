@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Cristiano Ronaldo pályafutása">
+    <meta name="copyright" content="Csak tanulmányi célokra">
+    <meta name="author" content="Németh Adél">
+	<link rel="stylesheet" href="mystyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Dhurjati&family=Roboto:wght@700&display=swap" rel="stylesheet">
+	<link rel="icon" href="kepek/favicon.png" type="image/x-icon">
+	<title>About Cristiano Ronaldo</title>
+	<script src="jquery-3.7.1.min.js"></script>
+	<script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+	<script>
+      $(document).ready(function(){
+            $("#myform").validate({ 
+rules: {
+szall_dat:{required: true,},
+parna_foto: {required: true,
+url: true},
+
+aszf: {
+required: true,},
+
+vezeteknev: "required",
+
+keresztnev: "required",
+
+email: {required: true,
+email: true},
+},
+
+messages: {
+szall_dat: " Kérlek adj meg dátumot!",
+parna_foto: "Kérlek valós URL-t adj meg!",
+aszf: " Kérlek fogadd el az általános szerződési feltételeinket!",
+vezeteknev: " Írd be a vezetékneved!",
+keresztnev: " Írd be a keresztneved!",
+email: " Kérlek valós email címet adj meg!",
+},
+            
+});
+});
+</script>
+<style>
+    label.error {
+    color: rgb(109, 11, 11);}
+</style>
+</head>
+<body>
+<header id="tetejere">
+
+<h1>About Cristiano Ronaldo</h1>
+
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Főoldal</a></li>
+		<li><a href="karrier.html">Karrier</a></li>
+		<li><a href="erdekessegek.html">Érdekességek</a></li>
+		<li><a href="#" id="active">Shop</a></li>
+	</ul>
+</nav>
+<div class="container">
+<form id="myform" action="http://szamtud.uni-corvinus.hu/receive.php" method="post" novalidate>
+	<article class="kozep" >
+		<h2>Te is szeretnél egy Ronalod mezt? Ne habozz! Cselekedj!</h2>
+		<h3>Válaszd ki azt a csapatot, ami számodra a legkedvesebb!</h3>
+		<h3>A mez ára: 30 000 Ft/db</h3>
+		<hr class="vonal">
+		
+				<figure><img class="mumez" src="kepek/mu_mez.jpg" alt="Manchester United mez"><figcaption>Manchester United</figcaption></figure>
+				<figure><img  class="rmmez" src="kepek/rm_mez.jpg" alt="Real Madrid mez"><figcaption>Real Madrid</figcaption></figure>
+				<figure><img  class="jumez" src="kepek/j_mez.jpg" alt="Juventus mez"><figcaption>Juventus</figcaption></figure>
+	</article>
+	<article>		
+			
+		<label>Melyik csapatot választod? <select id="csapat" name="csapat">
+            <option value="Manchester United">Manchester United</option>
+            <option value="Real Madrid">Real Madrid</option>
+            <option value="Juventus">Juventus</option>
+        </select></label>
+		<br><br>
+        <label>A mez mérete: <select id="mez_meret" name="mez_meret">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select></label>
+		<br><br>
+		<label>Darabszám (max.9): <input type="text" name="mez_darabszam" id="mez_darabszam"  ></label><br><br>
+	</article>
+
+	<article class="kozep">	
+		<hr class="vonal">
+		<h2>Párnák egyedi képpel</h2>
+		<h3>Minden nap a kedvenceddel ébrednél? Nálunk ezt is megvalósíthatod!</h3>
+		<h3>A párna ár: 5000 Ft/db</h3>
+		<hr class="vonal">
+		<figure><img src="kepek/cr7_parna.jpg" alt="CR7 párna" class="parna"><figcaption>Párna</figcaption></figure>
+		<figure><img src="kepek/cr7_takaro.jpeg" alt="CR7 takaró" class="takaro"><figcaption>Takaró</figcaption></figure>
+	</article>
+
+	<article>		
+		<br><br><label>Milyen képet szeretnél? Töltsd fel! <input type="url" name="parna_foto" id="parna_foto"></label><br><br>
+		<label>Milyen legyen az alapszín? <input type="color" name="parna_szin" id="parna_szin"></label><br><br>
+		<label>Darabszám (max.9): <input type="text" name="parna_darabszam" id="parna_darabszam"   ></label>
+
+	</article>
+	<article >
+		<h2>Összesítő</h2>
+		<hr class="vonal">
+		<div class="kosar" ><input type="button" name="kosar" value="Kosárba teszem" onclick="fizetendo()"></div><br><br>
+		<div class="vegosszeg" id="vegosszeg">Végösszeg: 0 Ft</div><br><br>
+		<label>Mire érkezzen meg a termék? <input type="date" name="szall_dat" id="szall_dat"></label><br><br>
+		<label>Elfogadon az általános szerződési feltételeket: <input type="checkbox" name="aszf" id="aszf"></label><br><br>
+		
+
+	</article>
+
+
+<article>
+
+<h2>Rendelés leadása</h2>
+<hr class="vonal">
+<h3 class="balra">Személyes adatok</h3>
+		<label>Vezetéknév: <input type="text" id="vezeteknev" name="vezeteknev" ></label><br>
+        <label>Keresztnév: <input type="text" id="keresztnev" name="keresztnev" ></label><br>
+        <label>E-mail: <input type="email" id="email" name="email" ></label><br>
+        <label>Telefonszám: <input type="tel" id="telefonszam" name="telefonszam" placeholder="+36"  ></label><br>
+<h3 class="balra">Szállítási adatok</h3>
+<label>Ország: <input type="text" id="orszag" name="orszag" ></label><br>
+        <label>Megye: <input type="text" id="megye" name="megye" ></label><br>
+		<label>Irányítószám: <br><input type="text" id="iranyitoszam" name="iranyitoszam" maxlength="4"></label><br>
+        <label>Város,utca: <input type="text" id="varosutca" name="varosutca" ></label><br>
+        <label>Házszám,emelet,ajtó: <input type="text" id="hazszam" name="hazszam"  ></label><br><br>
+		<input type="submit" name="rendeles" value="Rendelés"><br><br>
+</article>
+</form>
+<article><p  class="fel"><a href="#tetejere">Ugrás az oldal tetejére!</a></p></article>
+</div>	
+<footer>
+	<table>
+        <tr>
+            <td class="bal">
+                <p>További érdekességekért kövesd a social media oldalakon!</p>
+            </td>
+            <td class="jobb"> 
+                <a href="https://www.facebook.com/Cristiano" target="_blank"><img src="kepek/facebook.png" alt="CR7 Facebook oldala"></a>
+                <a href="https://www.instagram.com/cristiano/" target="_blank"><img src="kepek/instagram.png" alt="CR7 Instagram oldala"></a>
+                
+            </td>  
+        </tr>
+    </table>
+</footer>
+<script src="script.js">  </script>
+</body>
+</html>
